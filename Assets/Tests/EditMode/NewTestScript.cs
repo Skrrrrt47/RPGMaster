@@ -8,29 +8,17 @@ public class NewTestScript
 {
 
   [UnityTest]
-public IEnumerator TestMove()
+public IEnumerator TestName()
 {
-    int sum = 4 + 5;
-    Assert.AreEqual(9,sum);
+    var temp = new GameObject("player");
+    Assert.AreEqual("player",temp.name);
     yield return null;
 }
 [UnityTest]
-public IEnumerator TestTilemap()
+public IEnumerator TestStats()
 {
-    bool temp = true;
-    Assert.True(temp);
-    yield return null;
-}
-public IEnumerator TestSpell()
-{
-    bool temp = true;
-    Assert.True(temp);
-    yield return null;
-}
-public IEnumerator TestGame()
-{
-    bool temp = true;
-    Assert.True(temp);
+    var stat = new GameObject("textValue");
+    Assert.AreEqual("100/100",stat.name);
     yield return null;
 }
 }
